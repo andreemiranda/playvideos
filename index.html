@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/video-icon-red.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-storage.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-analytics.js"></script>
+    <title>Play</title>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>PLAY</h1>
+            <button class="btn-grad">Upload file</button>
+        </header>
+        <article id="main">
+            <div class="box">
+                <header>
+                    <h1>Cuidado!</h1>
+                </header>
+                <article>
+                    <p>Tem certeza que deseja excluir esse arquivo? <br><br><span></span><br><br></p>
+                    <ul>
+                        <li><input type="button" value="Sim" id="true"></li>
+                        <li><input type="button" value="Não" id="false"></li>
+                    </ul>
+                </article>
+            </div>
+            <div id="progress" hidden>
+                <div></div>
+            </div>
+            <ul id="playList">
+                <li>
+                    <figure>
+                        <img src="img/video-icon-black.png" all="video">
+                        <figcaption>Descrição</figcaption>
+                        <div id="minProgress" hidden>
+                            <div></div>
+                        </div>
+                    </figure>
+                 </li>
+                 <li>
+                    <figure>
+                        <img src="img/video-icon-black.png" all="video">
+                        <figcaption>Descrição</figcaption>
+                    </figure>
+                 </li>
+                 <li>
+                    <figure>
+                        <img src="img/video-icon-black.png" all="video">
+                        <figcaption>Descrição</figcaption>
+                    </figure>
+                 </li>
+                 <li>
+                    <figure>
+                        <img src="img/video-icon-black.png" all="video">
+                        <figcaption>Descrição</figcaption>
+                    </figure>
+                 </li>
+                 <li>
+                    <figure>
+                        <img src="img/video-icon-black.png" all="video">
+                        <figcaption>Descrição</figcaption>
+                    </figure>
+                 </li>
+                 <li>
+                    <figure>
+                        <img src="img/video-icon-black.png" all="video">
+                        <figcaption>Descrição</figcaption>
+                    </figure>
+                 </li>
+            </ul>
+            <section id="video" class="fixed">
+                <div class="x">X</div>
+                <!-- <iframe  src="https://www.youtube.com/embed/YP9nrR-ym3c" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                
+                <video src="" poster="img/video-icon-black.png"  data-key="null" id="mainV"></video>
+                <div id="menu">
+                    <ul>
+                        <li>
+                            <div id="modal_gallery" hidden>
+                                <ul>
+                                    <li>
+                                        <img src="img/video-icon-red.png">
+                                    </li>
+                                    <li>
+                                        <img src="img/video-icon-red.png">
+                                    </li>
+                                    <li>
+                                        <img src="img/video-icon-red.png">
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li id="menuPlay" class="inactive">
+                            <div id="t"></div>
+                        </li>
+                        <li id="gallery"><img src="img/gallery-video.png" alt="Cenas" width="100%"></li>
+                        <li><input type="range" name="" style="width: 80px;" id=""></li>
+                        <li id="screen">
+                            <div id="topL">L</div>
+                            <div id="bottomL">L</div>
+                            <div id="topR">L</div>
+                            <div id="bottomR">L</div>
+                        </li>
+
+                    </ul>
+                    <div id="minProgressVideo">
+                        <div></div>
+                    </div>
+                    <div id="duration"></div>
+                    <marquee behavior="" direction="">no file...</marquee>
+                </div>
+            </section>
+            <input type="file" name="" id="file" hidden accept="video/*">
+        </article>
+        <footer>
+            <article>
+                <section>
+                        <p>created by Wisterleys</p>
+                </section>
+                <aside>
+                    <figure id="git">
+                        <a href="https://github.com/Wisterleys" target="_blak">
+                        <img src="img/github-icon.svg" alt="iconGitHub">
+                        </a>
+                    </figure>
+                    <figure id="face">
+                        <a href="https://www.facebook.com/wister.sousa.1" target="_blak">
+                            <img src="img/facebook.svg" alt="iconFaceBook">
+                        </a>
+                    </figure>
+                </aside>
+            </article>
+        </footer>
+    </main>
+    <script src="js/Useful/S.js"></script>
+    <script src="js/Model/Model.js"></script>
+   <script src="js/Controller/Controller.js"></script>
+   <script src="js/index.js"></script>
+</body>
+</html>
